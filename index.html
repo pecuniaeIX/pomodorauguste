@@ -5,9 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/pomodorauguste/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pomodoro2</title>
+<link rel="manifest" href="/pomodorauguste/manifest.json">
+<meta name="theme-color" content="#1a1a18">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pomodorauguste">
     <script type="module" crossorigin src="/pomodorauguste/assets/index-DmaETmrs.js"></script>
     <link rel="stylesheet" crossorigin href="/pomodorauguste/assets/index-nqMpL4T3.css">
   </head>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/pomodorauguste/sw.js');
+  }
+</script>
   <body>
     <div id="root"></div>
   </body>
