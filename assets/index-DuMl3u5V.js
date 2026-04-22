@@ -12,8 +12,8 @@ Error generating stack: `+e.message+`
 :root{--bg:#1a1a18;--surface:#222220;--surface2:#2c2c29;--border:#353530;--text:#d4cfc6;--text-dim:#7a7770;--text-muted:#4a4845;--work:#c17a5a;--short:#6a9e82;--long:#6e8fad;--chrono:#8a7ab0;--danger:#a05050;}
 body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-height:100vh;}
 .app{display:grid;grid-template-columns:420px 1fr;grid-template-rows:auto auto 1fr;min-height:100vh;max-width:1100px;margin:0 auto;padding:28px 20px;gap:0 28px;}
-.header{grid-column:1/-1;display:flex;align-items:center;justify-content:center;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:18px;}
-.header h1{font-family:'Times New Roman',Times,serif;font-size:34px;letter-spacing:3px;font-style:italic;text-align:center;}
+.header{grid-column:1/-1;display:grid;grid-template-columns:420px 1fr;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:18px;}
+.header h1{font-family:'Times New Roman',Times,serif;font-size:34px;letter-spacing:3px;font-style:italic;text-align:left;}
 .app-tabs{grid-column:1/-1;display:flex;gap:6px;margin-bottom:28px;}
 .app-tab{padding:8px 20px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text-dim);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:1px;cursor:pointer;transition:all .2s;}
 .app-tab:hover{color:var(--text);border-color:var(--text-muted);}
