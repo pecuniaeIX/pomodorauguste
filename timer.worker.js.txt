@@ -1,0 +1,23 @@
+let interval = null;
+let timeLeft = 0;
+
+self.onmessage = (e) => {
+  const { type, time } = e.data;
+  if (type === "start") {
+    timeLeft = time;
+    clearInterval(interval);
+    interval = setInterval(() => {
+      timeLeft--;
+      self.postMessage({ type: "tick", timeLeft });
+      if (timeLeft <= 0) {
+        clearInterval(interval);
+        self.postMessage({ type: "done" });
+      }
+    }, 1000);
+  } else if (type === "pause") {
+    clearInterval(interval);
+  } else if (type === "reset") {
+    clearInterval(interval);
+    timeLeft = 0;
+  }
+};
